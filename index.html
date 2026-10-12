@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101c2b">
+<title>StudyNoor — Your day, with purpose</title>
+<style>
+:root{--bg:#f4f6f5;--panel:#fff;--ink:#172536;--muted:#748091;--line:#e6ebe8;--navy:#101c2b;--navy2:#192a3c;--green:#137a63;--green2:#e3f4ee;--gold:#d9b76c;--red:#b94a48;--shadow:0 12px 34px rgba(18,35,48,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:248px 1fr}.sidebar{background:var(--navy);color:#eaf0f4;padding:26px 18px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:11px;padding:0 10px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#d9b76c,#f0dfab);display:grid;place-items:center;color:#102132;font-size:22px;font-weight:800}.brand h1{font-size:20px;line-height:1.1;margin:0;letter-spacing:-.5px}.brand small{display:block;color:#a8b6c3;font-size:11px;margin-top:4px;letter-spacing:.5px}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#b9c5cf;text-align:left;padding:12px 14px;border-radius:12px;display:flex;gap:12px;align-items:center;font-weight:550}.nav button.active,.nav button:hover{background:#25384b;color:white}.nav .ico{width:22px;text-align:center;font-size:17px}.sidebar-bottom{margin-top:auto;background:#1b2c3d;border:1px solid #304355;border-radius:16px;padding:16px}.sidebar-bottom strong{font-size:13px}.sidebar-bottom p{font-size:12px;color:#b9c5cf;margin:7px 0 0}.main{min-width:0;padding:28px clamp(18px,4vw,48px) 44px;max-width:1500px;width:100%;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:1.5px;color:var(--green);font-weight:800}.topbar h2{font-size:27px;letter-spacing:-.8px;margin:3px 0 0}.today{color:var(--muted);font-size:13px;background:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:11px;white-space:nowrap}.welcome{border-radius:22px;background:linear-gradient(115deg,#12283a,#1a4b49);color:#fff;padding:27px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;overflow:hidden;margin-bottom:22px}.welcome:after{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(222,194,125,.22);border-radius:50%;right:9%;top:-100px;box-shadow:0 0 0 25px rgba(222,194,125,.035),0 0 0 55px rgba(222,194,125,.025)}.welcome-copy{position:relative;z-index:1}.welcome .eyebrow{color:#e6cc8c}.welcome h3{font-size:clamp(23px,3vw,32px);letter-spacing:-1px;line-height:1.15;margin:8px 0}.welcome p{color:#c6d8d8;margin:0;max-width:510px}.welcome .arabic{position:relative;z-index:1;color:#e7d19a;font-size:clamp(34px,5vw,52px);padding:10px 16px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:22px}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.stat{padding:18px}.stat-head{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-weight:650}.stat-icon{width:32px;height:32px;display:grid;place-items:center;background:#f0f5f2;border-radius:10px;font-size:16px}.stat strong{display:block;font-size:26px;letter-spacing:-.8px;margin:10px 0 1px}.stat small{color:var(--muted);font-size:11px}.content-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:18px;align-items:start}.stack{display:grid;gap:18px}.card{padding:21px}.card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:17px}.card-title h3{margin:0;font-size:17px;letter-spacing:-.3px}.card-title p{margin:4px 0 0;color:var(--muted);font-size:12px}.pill{background:var(--green2);color:var(--green);padding:5px 9px;border-radius:20px;font-size:11px;font-weight:750;white-space:nowrap}.prayer-list{display:grid;gap:9px}.prayer{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:13px;transition:.2s}.prayer.done{background:#f1faf6;border-color:#c6e7d9}.prayer-check{width:24px;height:24px;border:1.5px solid #cbd4d1;border-radius:8px;display:grid;place-items:center;flex-shrink:0;color:white;background:white}.prayer.done .prayer-check{background:var(--green);border-color:var(--green)}.prayer-name{font-weight:700}.prayer-sub{font-size:11px;color:var(--muted)}.prayer-spacer{flex:1}.prayer-status{font-size:11px;color:var(--muted)}.prayer.done .prayer-status{color:var(--green);font-weight:700}.progress-wrap{margin-top:16px}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:7px}.progress{height:7px;background:#edf1ef;border-radius:10px;overflow:hidden}.progress span{height:100%;display:block;background:linear-gradient(90deg,#137a63,#65b99c);border-radius:10px;width:0;transition:width .25s}.task-form{display:flex;gap:8px;margin-bottom:14px}.task-form input,.task-form select,.settings-input{min-width:0;width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.task-form input:focus,.settings-input:focus{border-color:#75b8a2;box-shadow:0 0 0 3px #e2f3ed}.btn{border:0;border-radius:11px;padding:10px 14px;font-weight:750;font-size:12px;white-space:nowrap}.btn-primary{background:var(--green);color:white}.btn-primary:hover{background:#0d6552}.btn-light{background:#f0f5f2;color:var(--green)}.task-list{display:grid;gap:8px}.task{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:11px}.task input{accent-color:var(--green);width:17px;height:17px}.task-text{flex:1;min-width:0}.task-text strong{display:block;font-size:13px;overflow-wrap:anywhere}.task-text small{font-size:11px;color:var(--muted)}.task.completed .task-text strong{text-decoration:line-through;color:#8c979b}.delete{border:0;background:transparent;color:#9aa4aa;font-size:18px;padding:2px 5px}.delete:hover{color:var(--red)}.empty{padding:18px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed #dce4df;border-radius:12px}.focus-box{background:#f5f8f6;border-radius:14px;padding:18px;text-align:center}.timer{font-size:43px;letter-spacing:-1.5px;font-weight:800;font-variant-numeric:tabular-nums;margin:8px 0}.timer-caption{font-size:12px;color:var(--muted)}.timer-controls{display:flex;justify-content:center;gap:8px;margin-top:14px}.quote{background:#fbf7eb;border:1px solid #f0e5c6;border-radius:14px;padding:17px}.quote .qmark{font-size:26px;color:#b08b3b;line-height:1}.quote p{margin:6px 0 8px;font-weight:650}.quote small{color:#85734c}.page{display:none}.page.active{display:block}.page-heading{margin-bottom:20px}.page-heading h2{font-size:28px;letter-spacing:-.8px;margin:3px 0}.page-heading p{margin:0;color:var(--muted)}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid var(--line)}.setting-row:last-child{border:0}.setting-row small{display:block;color:var(--muted);font-size:12px}.toggle{accent-color:var(--green);width:18px;height:18px}.notice{background:#fff8e9;border:1px solid #f0dfb5;color:#765f2c;padding:13px 15px;border-radius:12px;font-size:12px;margin-top:16px}.footer{text-align:center;color:#98a2a6;font-size:11px;padding:25px 0 0}.mobile-nav{display:none}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#152b39;color:white;padding:11px 16px;border-radius:12px;font-size:13px;box-shadow:var(--shadow);transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:1050px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.content-grid{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr}}@media(max-width:650px){.app{display:block}.sidebar{display:none}.main{padding:20px 14px 95px}.topbar{align-items:flex-start;margin-bottom:20px}.topbar h2{font-size:23px}.today{font-size:11px;padding:8px}.welcome{padding:22px 20px;border-radius:18px}.welcome .arabic{display:none}.stats{gap:10px}.stat{padding:14px}.stat strong{font-size:23px}.stat-icon{width:28px;height:28px}.card{padding:16px}.task-form{flex-wrap:wrap}.task-form input{flex:1 1 100%}.task-form select{flex:1}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(15px);border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom));justify-content:space-around;z-index:10}.mobile-nav button{border:0;background:transparent;color:#84908e;display:grid;gap:3px;justify-items:center;font-size:10px;padding:4px 7px}.mobile-nav button span{font-size:19px}.mobile-nav button.active{color:var(--green);font-weight:800}.prayer{padding:10px}.prayer-status{font-size:10px}.page-heading h2{font-size:25px}} 
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">☾</div><div><h1>StudyNoor</h1><small>YOUR DAY, WITH PURPOSE</small></div></div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-page="dashboard"><span class="ico">⌂</span> Dashboard</button>
+    <button data-page="prayers"><span class="ico">☾</span> Prayer tracker</button>
+    <button data-page="study"><span class="ico">▤</span> Study planner</button>
+    <button data-page="focus"><span class="ico">◷</span> Focus timer</button>
+    <button data-page="settings"><span class="ico">⚙</span> Settings & data</button>
+  </nav>
+  <div class="sidebar-bottom"><strong>Small steps, every day.</strong><p>Build a routine that makes room for both your goals and your values.</p></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">A calmer, clearer day</div><h2 id="greeting">Assalamu Alaikum</h2></div><div class="today" id="todayDate"></div></header>
+
+<section class="page active" id="page-dashboard">
+  <div class="welcome"><div class="welcome-copy"><div class="eyebrow">WELCOME TO YOUR SPACE</div><h3>Make today meaningful.</h3><p>One prayer, one study session, one small step at a time. Your progress starts here.</p></div><div class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ</div></div>
+  <div class="stats">
+    <div class="stat"><div class="stat-head">Prayers completed <span class="stat-icon">☾</span></div><strong id="statPrayers">0/5</strong><small id="prayerStatSub">A fresh start today</small></div>
+    <div class="stat"><div class="stat-head">Tasks completed <span class="stat-icon">✓</span></div><strong id="statTasks">0</strong><small id="taskStatSub">Keep moving forward</small></div>
+    <div class="stat"><div class="stat-head">Study tasks left <span class="stat-icon">▤</span></div><strong id="statLeft">0</strong><small>On your list for today</small></div>
+    <div class="stat"><div class="stat-head">Focus minutes <span class="stat-icon">◷</span></div><strong id="statFocus">0</strong><small>Completed focus sessions</small></div>
+  </div>
+  <div class="content-grid">
+    <div class="stack">
+      <section class="card">
+        <div class="card-title"><div><h3>Today's prayers</h3><p>Mark each prayer when you have completed it.</p></div><span class="pill" id="prayerPill">0 of 5</span></div>
+        <div class="prayer-list" id="dashboardPrayers"></div>
+        <div class="progress-wrap"><div class="progress-label"><span>Daily prayer progress</span><strong id="prayerPercent">0%</strong></div><div class="progress"><span id="prayerProgress"></span></div></div>
+      </section>
+      <section class="card">
+        <div class="card-title"><div><h3>Today's study plan</h3><p>Keep your next step clear and manageable.</p></div><button class="btn btn-light" data-goto="study">View all</button></div>
+        <div class="task-list" id="dashboardTasks"></div>
+      </section>
+    </div>
+    <div class="stack">
+      <section class="card">
+        <div class="card-title"><div><h3>Quick focus</h3><p>Give one task your full attention.</p></div><span class="pill">25 min</span></div>
+        <div class="focus-box"><div class="timer-caption">POMODORO SESSION</div><div class="timer" id="miniTimer">25:00</div><div class="timer-caption" id="miniTimerLabel">Ready when you are</div><div class="timer-controls"><button class="btn btn-primary" id="miniStart">Start focus</button><button class="btn btn-light" id="miniReset">Reset</button></div></div>
+      </section>
+      <section class="card">
+        <div class="card-title"><div><h3>A gentle reminder</h3><p>A little encouragement for your day.</p></div></div>
+        <div class="quote"><div class="qmark">“</div><p>And that each person will only have what they endeavoured towards.</p><small>Qur'an 53:39 · Sahih International translation</small></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="page-prayers">
+  <div class="page-heading"><div class="eyebrow">YOUR DAILY ROUTINE</div><h2>Prayer tracker</h2><p>Track your five daily prayers, one day at a time.</p></div>
+  <section class="card"><div class="card-title"><div><h3>Daily checklist</h3><p>Your progress is saved in this browser on this device.</p></div><span class="pill" id="prayerPill2">0 of 5</span></div><div class="prayer-list" id="fullPrayers"></div><div class="progress-wrap"><div class="progress-label"><span>Today's progress</span><strong id="prayerPercent2">0%</strong></div><div class="progress"><span id="prayerProgress2"></span></div></div><div class="notice">This is a personal checklist, not an automatic prayer-time service. Mark prayers yourself. The app does not send prayer-time notifications.</div></section>
+</section>
+
+<section class="page" id="page-study">
+  <div class="page-heading"><div class="eyebrow">PLAN WITH INTENTION</div><h2>Study planner</h2><p>Turn big goals into small, doable tasks.</p></div>
+  <section class="card"><div class="card-title"><div><h3>Add a study task</h3><p>Keep the next action specific.</p></div></div>
+    <form class="task-form" id="taskForm"><input id="taskInput" maxlength="100" placeholder="e.g. Revise portfolio management" required aria-label="Study task"><select id="taskSubject" aria-label="Subject"><option>General</option><option>Finance</option><option>Operations</option><option>Exam preparation</option><option>Personal</option></select><button class="btn btn-primary" type="submit">+ Add task</button></form>
+    <div class="card-title"><div><h3>Your tasks</h3><p id="taskListCaption">Your plan for today</p></div><button class="btn btn-light" id="clearCompleted">Clear completed</button></div>
+    <div class="task-list" id="fullTasks"></div>
+  </section>
+</section>
+
+<section class="page" id="page-focus">
+  <div class="page-heading"><div class="eyebrow">ONE THING AT A TIME</div><h2>Focus timer</h2><p>Work in a focused block, then take a break.</p></div>
+  <section class="card" style="max-width:680px;margin:0 auto"><div class="card-title"><div><h3 id="focusTitle">Focus session</h3><p>Choose a session length that suits your work.</p></div><span class="pill" id="focusStatus">Ready</span></div>
+  <div class="focus-box"><div class="timer-caption" id="focusModeCaption">DEEP WORK</div><div class="timer" id="bigTimer">25:00</div><div class="timer-caption" id="focusLabel">Settle in and begin when you're ready.</div><div class="timer-controls"><button class="btn btn-primary" id="bigStart">Start focus</button><button class="btn btn-light" id="bigReset">Reset</button></div></div>
+  <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;justify-content:center"><button class="btn btn-light mode-btn" data-minutes="25" data-mode="Focus">25 min focus</button><button class="btn btn-light mode-btn" data-minutes="5" data-mode="Short break">5 min break</button><button class="btn btn-light mode-btn" data-minutes="15" data-mode="Long break">15 min break</button></div>
+  <div class="notice">Keep this page open while the timer runs. Focus minutes are counted when a focus session finishes; the timer does not run in the background reliably if the browser closes.</div></section>
+</section>
+
+<section class="page" id="page-settings">
+  <div class="page-heading"><div class="eyebrow">YOUR SPACE, YOUR CHOICE</div><h2>Settings & data</h2><p>Manage your name and understand how your data is stored.</p></div>
+  <div class="settings-grid">
+    <section class="card"><div class="card-title"><div><h3>Personalise StudyNoor</h3><p>Make your dashboard feel like yours.</p></div></div><label for="nameInput" style="display:block;font-weight:700;font-size:13px;margin-bottom:7px">What should we call you?</label><input class="settings-input" id="nameInput" maxlength="40" placeholder="Your name"><button class="btn btn-primary" id="saveName" style="margin-top:12px">Save name</button></section>
+    <section class="card"><div class="card-title"><div><h3>Your data</h3><p>Important information about this version.</p></div></div><div class="setting-row"><div><strong style="font-size:13px">Storage</strong><small>Saved in this browser on this device</small></div><span class="pill">Local</span></div><div class="setting-row"><div><strong style="font-size:13px">Cloud sync</strong><small>Not connected in this version</small></div><span class="pill" style="background:#f5f0e5;color:#8b6b28">Off</span></div><div class="setting-row"><div><strong style="font-size:13px">Export your data</strong><small>Download a backup file</small></div><button class="btn btn-light" id="exportData">Export</button></div><div class="setting-row"><div><strong style="font-size:13px">Reset all data</strong><small>Remove saved tasks and progress</small></div><button class="btn" style="background:#fae9e8;color:#a63e3c" id="resetData">Reset</button></div></section>
+  </div>
+  <div class="notice">Privacy note: This version stores your checklist, tasks, name, and focus count in your browser's local storage. It does not currently use an account or cloud database. Data may not transfer to another device or browser. Export a backup before clearing browser data.</div>
+</section>
+<div class="footer">StudyNoor · Small steps, with purpose. · Your data stays in this browser.</div>
+</main>
+</div>
+<nav class="mobile-nav" aria-label="Mobile navigation"><button class="active" data-page="dashboard"><span>⌂</span>Home</button><button data-page="prayers"><span>☾</span>Prayers</button><button data-page="study"><span>▤</span>Study</button><button data-page="focus"><span>◷</span>Focus</button><button data-page="settings"><span>⚙</span>Settings</button></nav>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const prayerNames=[["Fajr","Dawn"],["Dhuhr","Midday"],["Asr","Afternoon"],["Maghrib","Sunset"],["Isha","Night"]];
+const todayKey=()=>new Date().toLocaleDateString("en-CA");
+const safeParse=(s,f)=>{try{return JSON.parse(s)||f}catch(e){return f}};
+let state=safeParse(localStorage.getItem("studynoor_v1"),{});
+state.prayersByDay=state.prayersByDay||{};state.tasks=Array.isArray(state.tasks)?state.tasks:[];state.focusMinutes=Number(state.focusMinutes)||0;state.name=state.name||"";
+const key=todayKey();
+if(!state.prayersByDay[key])state.prayersByDay[key]=[false,false,false,false,false];
+function save(){localStorage.setItem("studynoor_v1",JSON.stringify(state))}
+function todayPrayers(){return state.prayersByDay[key]}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+let toastTimeout;
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$("toast").classList.remove("show"),2300)}
+function prayerMarkup(container){$(container).innerHTML=prayerNames.map((p,i)=>`<div class="prayer ${todayPrayers()[i]?"done":""}" role="button" tabindex="0" data-prayer="${i}" aria-pressed="${todayPrayers()[i]}"><div class="prayer-check">${todayPrayers()[i]?"✓":""}</div><div><div class="prayer-name">${p[0]}</div><div class="prayer-sub">${p[1]} prayer</div></div><div class="prayer-spacer"></div><div class="prayer-status">${todayPrayers()[i]?"Completed":"Mark complete"}</div></div>`).join("");}
+function taskMarkup(container,limit){let arr=state.tasks.slice();if(limit)arr=arr.slice(0,4);if(!arr.length){$(container).innerHTML='<div class="empty">No tasks yet. Add one small step to get started.</div>';return}$(container).innerHTML=arr.map(t=>`<div class="task ${t.done?"completed":""}"><input type="checkbox" data-task="${t.id}" ${t.done?"checked":""} aria-label="Complete ${esc(t.title)}"><div class="task-text"><strong>${esc(t.title)}</strong><small>${esc(t.subject||"General")}</small></div>${limit?"":`<button class="delete" data-delete="${t.id}" aria-label="Delete task">×</button>`}</div>`).join("")}
+function render(){
+prayerMarkup("dashboardPrayers");prayerMarkup("fullPrayers");taskMarkup("dashboardTasks",true);taskMarkup("fullTasks",false);
+const pc=todayPrayers().filter(Boolean).length,done=state.tasks.filter(t=>t.done).length,left=state.tasks.length-done,percent=Math.round(pc/5*100);
+$("statPrayers").textContent=pc+"/5";$("prayerStatSub").textContent=pc===5?"All five checked off — well done":pc===0?"A fresh start today":(5-pc)+" remaining today";
+$("statTasks").textContent=done;$("taskStatSub").textContent=state.tasks.length?`${Math.round(done/state.tasks.length*100)}% of your list complete`:"Add your first task";
+$("statLeft").textContent=left;$("statFocus").textContent=state.focusMinutes;
+["prayerPill","prayerPill2"].forEach(id=>$(id).textContent=pc+" of 5");
+["prayerPercent","prayerPercent2"].forEach(id=>$(id).textContent=percent+"%");
+["prayerProgress","prayerProgress2"].forEach(id=>$(id).style.width=percent+"%");
+$("taskListCaption").textContent=state.tasks.length?`${done} completed · ${left} remaining`:"Your plan for today";
+$("nameInput").value=state.name||"";
+$("greeting").textContent=state.name?`Assalamu Alaikum, ${state.name}`:"Assalamu Alaikum";
+}
+function showPage(name){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+name));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===name));window.scrollTo({top:0,behavior:"smooth"});}
+document.addEventListener("click",e=>{
+const nav=e.target.closest("[data-page]");if(nav){showPage(nav.dataset.page);return}
+const go=e.target.closest("[data-goto]");if(go){showPage(go.dataset.goto);return}
+const prayer=e.target.closest("[data-prayer]");if(prayer){const i=Number(prayer.dataset.prayer);todayPrayers()[i]=!todayPrayers()[i];save();render();toast(todayPrayers()[i]?"Prayer marked complete":"Prayer mark removed");return}
+const del=e.target.closest("[data-delete]");if(del){state.tasks=state.tasks.filter(t=>String(t.id)!==del.dataset.delete);save();render();toast("Task deleted");return}
+const mode=e.target.closest(".mode-btn");if(mode){setTimer(Number(mode.dataset.minutes),mode.dataset.mode);showPage("focus");return}
+});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-prayer]")){e.preventDefault();e.target.click()}});
+document.addEventListener("change",e=>{if(e.target.matches("[data-task]")){const t=state.tasks.find(t=>String(t.id)===e.target.dataset.task);if(t){t.done=e.target.checked;save();render();toast(t.done?"Task completed":"Task reopened")}}});
+$("taskForm").addEventListener("submit",e=>{e.preventDefault();const title=$("taskInput").value.trim();if(!title)return;state.tasks.unshift({id:Date.now(),title,subject:$("taskSubject").value,done:false,created:new Date().toISOString()});save();$("taskInput").value="";render();toast("Study task added")});
+$("clearCompleted").addEventListener("click",()=>{state.tasks=state.tasks.filter(t=>!t.done);save();render();toast("Completed tasks cleared")});
+$("saveName").addEventListener("click",()=>{state.name=$("nameInput").value.trim();save();render();toast("Name saved")});
+$("exportData").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="studynoor-backup.json";a.click();URL.revokeObjectURL(url);toast("Backup export started")});
+$("resetData").addEventListener("click",()=>{if(confirm("Reset all StudyNoor data saved in this browser? This cannot be undone unless you exported a backup.")){localStorage.removeItem("studynoor_v1");state={prayersByDay:{},tasks:[],focusMinutes:0,name:""};state.prayersByDay[key]=[false,false,false,false,false];save();render();toast("Local data reset")}});
+const DEFAULT_SECONDS=25*60;let timerSeconds=DEFAULT_SECONDS,timerRunning=false,timerMode="Focus",timerInterval=null;
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
+function drawTimer(){["miniTimer","bigTimer"].forEach(id=>$(id).textContent=fmt(timerSeconds));$("miniTimerLabel").textContent=timerRunning?"Focus is in progress":timerMode==="Focus"?"Ready when you are":timerMode+" selected";$("focusTitle").textContent=timerMode==="Focus"?"Focus session":timerMode;$("focusModeCaption").textContent=timerMode==="Focus"?"DEEP WORK":timerMode.toUpperCase();$("focusLabel").textContent=timerRunning?"Stay with one task until the timer ends.":timerMode==="Focus"?"Settle in and begin when you're ready.":"Take a breather before the next session.";$("focusStatus").textContent=timerRunning?"Running":"Ready";$("miniStart").textContent=timerRunning?"Pause":"Start focus";$("bigStart").textContent=timerRunning?"Pause":"Start "+(timerMode==="Focus"?"focus":"break")}
+function stopTimer(){if(timerInterval)clearInterval(timerInterval);timerInterval=null;timerRunning=false}
+function setTimer(min,mode){stopTimer();timerMode=mode;timerSeconds=min*60;drawTimer()}
+function toggleTimer(){if(timerRunning){stopTimer();drawTimer();return}timerRunning=true;drawTimer();timerInterval=setInterval(()=>{timerSeconds--;if(timerSeconds<=0){timerSeconds=0;stopTimer();if(timerMode==="Focus"){state.focusMinutes+=25;save();render()}drawTimer();toast(timerMode==="Focus"?"Focus session complete — well done!":"Break finished — ready when you are");try{if("vibrate"in navigator)navigator.vibrate([150,70,150])}catch(e){}return}drawTimer()},1000)}
+$("miniStart").addEventListener("click",toggleTimer);$("bigStart").addEventListener("click",toggleTimer);$("miniReset").addEventListener("click",()=>setTimer(25,"Focus"));$("bigReset").addEventListener("click",()=>setTimer(timerMode==="Focus"?25:timerMode==="Short break"?5:15,timerMode));
+document.querySelectorAll(".mode-btn").forEach(b=>b.addEventListener("click",()=>setTimer(Number(b.dataset.minutes),b.dataset.mode)));
+const date=new Date();$("todayDate").textContent=date.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+const hour=date.getHours();if(hour<12)$("greeting").textContent="Assalamu Alaikum · Good morning";else if(hour<17)$("greeting").textContent="Assalamu Alaikum · Good afternoon";else $("greeting").textContent="Assalamu Alaikum · Good evening";
+render();drawTimer();
+})();
+</script>
+</body>
+</html>
